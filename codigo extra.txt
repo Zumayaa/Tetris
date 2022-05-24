@@ -1,0 +1,44 @@
+
+mostrar_datos(buffer, img_texto, img_num, puntos, nivel);
+
+/*
+void mostrar_numero(BITMAP * buffer, BITMAP * img_num, int numero, int xnum, int ynum){
+    int uDigito, pos = 0;
+    if(numero != 0){
+        while(numero != 0){
+            uDigito = numero % 10;
+            blit(img_num, buffer, uDigito*30, 0, xnum-pos, ynum, 30, 60);
+            numero /= 10;
+            pos += 38;
+        }
+    }
+    else
+        blit(img_num, buffer, 0, 0, xnum, ynum, 30, 60);
+}
+
+void mostrar_datos(BITMAP * buffer, BITMAP * img_texto, BITMAP* img_num, int puntos, int nivel){
+
+    blit(img_texto, buffer, 0, 0, 320, 50, 146, 34);
+    blit(img_texto, buffer, 0, 34, 320, 210, 119, 34);
+    mostrar_numero(buffer, img_num, puntos, 430, 260);
+    blit(img_texto, buffer, 0, 68, 320, 340, 82, 34);
+    mostrar_numero(buffer, img_num, nivel, 430, 390);
+}
+*/
+
+game over
+
+
+
+
+
+
+   if(gameOver){
+        while(!key[KEY_ESC]){
+            blit(goBmp, buffer, 0, 0, 29, 175, 243, 108);
+            if(key[KEY_ENTER])
+                goto salto;
+            blit(buffer, screen, 0, 0, 0, 0, ANCHO, ALTO);
+            rest(5);
+        }
+    }
