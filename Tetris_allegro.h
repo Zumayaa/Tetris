@@ -4,11 +4,11 @@
 #include <allegro.h>
 
 #define anchura 800
-#define ALTO  825
+#define altura  820
 #define Tbloque 25
 
-#define orange   0
-#define blue     1
+#define color1   0
+#define color2     1
 #define purple   2
 #define red      3
 #define yellow   4
@@ -46,8 +46,8 @@ class pieza{
         void rotar();
 };
 
-void mostrar_muros(BITMAP * buffer, BITMAP * muroH, BITMAP * muroV);
-void mostrar_marco(BITMAP * buffer, BITMAP * marco);
+void mostrar_muros(BITMAP * buffer, BITMAP * marco);
+//void mostrar_marco(BITMAP * buffer, BITMAP * marco);
 void mostrar_numero(BITMAP * buffer, BITMAP * img_num, int numero, int xnum, int ynum);
 void mostrar_datos(BITMAP * buffer, BITMAP * img_texto, BITMAP * img_num, int puntos, int nivel);
 void limpiar_mapa();

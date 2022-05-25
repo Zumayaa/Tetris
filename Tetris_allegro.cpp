@@ -2,11 +2,11 @@
 #include <allegro.h>
 
 #define anchura 800
-#define ALTO  825
+#define altura  820
 #define Tbloque 25
 
-#define orange   0
-#define blue     1
+#define color1   0
+#define color2     1
 #define purple   2
 #define red      3
 #define yellow   4
@@ -99,6 +99,7 @@ void pieza::rotar(){
         bls[i].x = bls[i].y;
         bls[i].y = aux;
         bls[i].x *= -1;
+        rest(5);
     }
 }
 
@@ -109,18 +110,19 @@ bool pieza::fila_llena(int fila){
     return true;
 }
 
-void mostrar_muros(BITMAP * buffer, BITMAP * muroH, BITMAP * muroV){
-    blit(muroV, buffer, 0, 0, 0, 0, 25, 500);
-    blit(muroH, buffer, 0, 0, 0, 500, 300, 25);
-    blit(muroV, buffer, 0, 0, 275, 0, 25, 500);
+void mostrar_muros(BITMAP * buffer, BITMAP * marco){
+//    blit(muroV, buffer, 0, 0, 0, 0, 25, 500);
+ //   blit(muroH, buffer, 0, 0, 0, 500, 300, 25);
+  //  blit(muroV, buffer, 0, 0, 275, 0, 25, 500);
+     blit(marco, buffer, 0, 0, 0, 0, 850, 900);
 
 
 }
-
+/*
 void mostrar_marco(BITMAP * buffer, BITMAP * marco){
    blit(marco, buffer, 0, 0, 0, 0, 850, 900);
 }
-
+*/
 void limpiar_mapa(){
     for(int i=0; i<21; i++){
         for(int j=0; j<12; j++){
@@ -173,3 +175,18 @@ void eliminar_fila(int fila){
         for(int j=1; j<11; j++)
             mapa[i][j] = mapa[i-1][j];
 }
+
+void portada(BITMAP * p){
+   int flash = 0;
+   while(!key[KEY_ENTER]){
+      if(flash<80)
+        blit(p, screen, 0,0,0,0, anchura, altura);
+      else
+        blit(p, screen, 805,0,0,0, anchura, altura);
+      rest(5);
+      if(++flash == 150)
+        flash = 0;
+   }
+ clear_to_color(screen, 0x000000);
+}
+
