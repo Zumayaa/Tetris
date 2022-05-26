@@ -6,11 +6,11 @@
 #define Tbloque 25
 
 #define color1   0
-#define color2     1
-#define purple   2
-#define red      3
-#define yellow   4
-#define green    5
+#define color2   1
+#define color3   2
+#define color4   3
+#define color50   4
+#define color6   5
 
 #define Ladrillo 0
 
@@ -163,11 +163,11 @@ void mostrar_numero(BITMAP * buffer, BITMAP * img_num, int numero, int xnum, int
 
 void mostrar_datos(BITMAP * buffer, BITMAP * img_texto, BITMAP* img_num, int puntos, int nivel){
 
-    blit(img_texto, buffer, 0, 0, 380, 50, 146, 34);
-    blit(img_texto, buffer, 0, 34, 380, 210, 119, 34);
-    mostrar_numero(buffer, img_num, puntos, 430, 260);
-    blit(img_texto, buffer, 0, 68, 320, 340, 182, 34);
-    mostrar_numero(buffer, img_num, nivel, 430, 390);
+    blit(img_texto, buffer, 0, 0, 350, 55, 90, 34);
+    blit(img_texto, buffer, 0, 34, 625, 60, 119, 34);
+    mostrar_numero(buffer, img_num, puntos, 620, 140);
+    blit(img_texto, buffer, 0, 68, 610, 560, 122, 34);
+    mostrar_numero(buffer, img_num, nivel, 630, 600);
 }
 
 void eliminar_fila(int fila){

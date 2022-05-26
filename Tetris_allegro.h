@@ -9,10 +9,10 @@
 
 #define color1   0
 #define color2     1
-#define purple   2
-#define red      3
-#define yellow   4
-#define green    5
+#define color3   2
+#define color4      3
+#define color5   4
+#define color6    5
 
 #define Ladrillo 0
 
