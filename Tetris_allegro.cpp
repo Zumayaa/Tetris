@@ -9,8 +9,9 @@
 #define color2   1
 #define color3   2
 #define color4   3
-#define color50   4
+#define color5   4
 #define color6   5
+#define color7   6
 
 #define Ladrillo 0
 

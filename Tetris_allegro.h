@@ -7,14 +7,15 @@
 #define altura  820
 #define Tbloque 25
 
-#define color1   0
-#define color2     1
-#define color3   2
-#define color4      3
-#define color5   4
+#define color1    0
+#define color2    1
+#define color3    2
+#define color4    3
+#define color5    4
 #define color6    5
+#define color7    6
 
-#define Ladrillo 0
+#define Ladrillo  0
 
 
 void mostrar_bloque(BITMAP * buffer, BITMAP * img_b, int XC, int YC, int color, int tipo);

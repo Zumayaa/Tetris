@@ -58,32 +58,38 @@ int main(){
     //Bloques
     Bloque b_prin = { 5, 2, Ladrillo};
     Bloque b_prin_sig = { 15, 5, Ladrillo };
-    Bloque bl1[3] = { {  0, -1, Ladrillo } , {  1, -1, Ladrillo } , {  0, 1, Ladrillo } };
+    Bloque bl1[3] = { {  0, -1, Ladrillo } , {  1, -1, Ladrillo } , {  0, 1, Ladrillo} };
     Bloque bl2[3] = { {  0,  1, Ladrillo } , {  1,  0, Ladrillo } , { -1, 0, Ladrillo} };
     Bloque bl3[3] = { {  0, -1, Ladrillo } , { -1, -1, Ladrillo } , { -1, 0, Ladrillo} };
     Bloque bl4[3] = { {  0, -1, Ladrillo } , {  0,  1, Ladrillo } , {  0, 2, Ladrillo} };
     Bloque bl5[3] = { {  0, -1, Ladrillo } , {  0,  1, Ladrillo } , {  1, 1, Ladrillo} };
-    Bloque bl6[3] = { { -1, -1, Ladrillo } , {  0, -1, Ladrillo } , {  1, 0, Ladrillo} };
+    Bloque bl6[3] = { {  0, -1, Ladrillo } , {  1, -1, Ladrillo } , { -1, 0, Ladrillo} };
+    Bloque bl7[3] = { { -1, -1, Ladrillo } , {  0, -1, Ladrillo } , {  1, 0, Ladrillo} };
+
 
     //Generar piezas aleatorias0
     pieza pAc(b_prin, bl1, 0);
     srand(time(NULL));
-    aleatorio = 1 + rand() % 6;
+    aleatorio = 1 + rand() % 8;
     if(aleatorio == 1) pAc.setBls(bl1), pAc.setColor(color1);
     else if(aleatorio == 2) pAc.setBls(bl2), pAc.setColor(color6);
     else if(aleatorio == 3) pAc.setBls(bl3), pAc.setColor(color5);
     else if(aleatorio == 4) pAc.setBls(bl4), pAc.setColor(color3);
     else if(aleatorio == 5) pAc.setBls(bl5), pAc.setColor(color4);
     else if(aleatorio == 6) pAc.setBls(bl6), pAc.setColor(color2);
+    else if(aleatorio == 7) pAc.setBls(bl7), pAc.setColor(color7);
+
 
     pieza pSig(b_prin_sig, bl1, 0);
-    aleatorio = 1 + rand() % 6;
+    aleatorio = 1 + rand() % 8;
     if(aleatorio == 1) pSig.setBls(bl1), pSig.setColor(color1);
     else if(aleatorio == 2) pSig.setBls(bl2), pSig.setColor(color6);
     else if(aleatorio == 3) pSig.setBls(bl3), pSig.setColor(color5);
     else if(aleatorio == 4) pSig.setBls(bl4), pSig.setColor(color3);
     else if(aleatorio == 5) pSig.setBls(bl5), pSig.setColor(color4);
     else if(aleatorio == 6) pSig.setBls(bl6), pSig.setColor(color2);
+    else if(aleatorio == 7) pSig.setBls(bl7), pSig.setColor(color7);
+
 
     limpiar_mapa();
     while(!key[KEY_ESC] && gameOver == false){
@@ -144,13 +150,15 @@ int main(){
             b_prin.x = 5, b_prin.y = 2;
             pAc = pSig;
             pAc.setBPrin(b_prin);
-            aleatorio = 1 + rand() % 6;
+            aleatorio = 1 + rand() % 8;
             if(aleatorio == 1) pSig.setBls(bl1), pSig.setColor(color1);
             else if(aleatorio == 2) pSig.setBls(bl2), pSig.setColor(color6);
             else if(aleatorio == 3) pSig.setBls(bl3), pSig.setColor(color5);
             else if(aleatorio == 4) pSig.setBls(bl4), pSig.setColor(color3);
             else if(aleatorio == 5) pSig.setBls(bl5), pSig.setColor(color4);
             else if(aleatorio == 6) pSig.setBls(bl6), pSig.setColor(color2);
+            else if(aleatorio == 7) pSig.setBls(bl7), pSig.setColor(color7);
+
             colb = false;
             rest(100);
         }
@@ -182,7 +190,7 @@ int main(){
             vcaida = 0;
 
         if(++aux >= 7){
-            vcaida = 1;
+            vcaida = 7;
             aux = 0;
         }
 
