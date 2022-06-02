@@ -161,15 +161,97 @@ void mostrar_numero(BITMAP * buffer, BITMAP * img_num, int numero, int xnum, int
     else
         blit(img_num, buffer, 0, 0, xnum, ynum, 30, 60);
 }
+void mostrar_dat(BITMAP * buffer, BITMAP * img_num, int numero, int xnum, int ynum){
+    int uDigito, pos = 0;
+    if(numero != 0){
+        while(numero != 0){
+            uDigito = numero % 10;
+            blit(img_num, buffer, uDigito*30, 0, xnum-pos, ynum, 30, 60);
+            numero /= 10;
+            pos += 38;
+        }
+    }
+    else
+        blit(img_num, buffer, 0, 0, xnum, ynum, 30, 60);
+}
+
+
+void mostrar_dat1(BITMAP * buffer, BITMAP * img_num, int numero, int xnum, int ynum){
+    int uDigito, pos = 0;
+    if(numero != 0){
+        while(numero != 0){
+            uDigito = numero % 10;
+            blit(img_num, buffer, uDigito*30, 0, xnum-pos, ynum, 30, 60);
+            numero /= 10;
+            pos += 38;
+        }
+    }
+    else
+        blit(img_num, buffer, 0, 0, xnum, ynum, 30, 60);
+}
+void mostrar_dat2(BITMAP * buffer, BITMAP * img_num, int numero, int xnum, int ynum){
+    int uDigito, pos = 0;
+    if(numero != 0){
+        while(numero != 0){
+            uDigito = numero % 10;
+            blit(img_num, buffer, uDigito*30, 0, xnum-pos, ynum, 30, 60);
+            numero /= 10;
+            pos += 38;
+        }
+    }
+    else
+        blit(img_num, buffer, 0, 0, xnum, ynum, 30, 60);
+}
+
+void mostrar_dat3(BITMAP * buffer, BITMAP * img_num, int numero, int xnum, int ynum){
+    int uDigito, pos = 0;
+    if(numero != 0){
+        while(numero != 0){
+            uDigito = numero % 10;
+            blit(img_num, buffer, uDigito*30, 0, xnum-pos, ynum, 30, 60);
+            numero /= 10;
+            pos += 38;
+        }
+    }
+    else
+        blit(img_num, buffer, 0, 0, xnum, ynum, 30, 60);
+}
+
+
 
 void mostrar_datos(BITMAP * buffer, BITMAP * img_texto, BITMAP* img_num, int puntos, int nivel){
 
     blit(img_texto, buffer, 0, 0, 350, 55, 90, 34);
-    blit(img_texto, buffer, 0, 34, 625, 60, 119, 34);
-    mostrar_numero(buffer, img_num, puntos, 620, 140);
+    mostrar_numero(buffer, img_num, puntos, 700, 350);
     blit(img_texto, buffer, 0, 68, 610, 560, 122, 34);
     mostrar_numero(buffer, img_num, nivel, 630, 600);
 }
+
+void mostrar_dat(BITMAP * buffer,  BITMAP * img_num, int ese, int zeta){
+
+    mostrar_numero(buffer, img_num, ese, 525, 750);
+    mostrar_numero(buffer, img_num, zeta, 525, 360);
+}
+
+void mostrar_dat1(BITMAP * buffer, BITMAP * img_num, int ele, int cuadrado){
+
+    mostrar_numero(buffer, img_num, ele, 525, 520);
+    mostrar_numero(buffer, img_num, cuadrado, 525, 435);
+}
+
+void mostrar_dat2(BITMAP * buffer,  BITMAP * img_num, int palo, int ele2){
+
+    mostrar_numero(buffer, img_num, palo, 525, 600);
+    mostrar_numero(buffer, img_num, ele2, 525, 690);
+}
+
+void mostrar_dat3(BITMAP * buffer,  BITMAP * img_num, int te){
+
+    mostrar_numero(buffer, img_num, te, 525, 290);
+
+}
+
+
 
 void eliminar_fila(int fila){
     for(int i=fila; i>0; i--)

@@ -1,16 +1,31 @@
 # depslib dependency file v1.0
-1653732388 source:f:\uni software\tareas\programacion\tetris progreso\main.cpp
+1653988072 source:f:\uni software\tareas\programacion\tetris progreso\main.cpp
 	<iostream>
 	<allegro.h>
 	<time.h>
 	"Tetris_allegro.h"
 
-1653723655 f:\uni software\tareas\programacion\tetris progreso\tetris_allegro.h
+1653953514 f:\uni software\tareas\programacion\tetris progreso\tetris_allegro.h
 	<allegro.h>
 
 1599235444 source:f:\uni software\tareas\programacion\tetris progreso\recurso.rc
 
-1653723655 source:f:\uni software\tareas\programacion\tetris progreso\tetris_allegro.cpp
+1653950050 source:f:\uni software\tareas\programacion\tetris progreso\tetris_allegro.cpp
+	"Tetris_allegro.h"
+	<allegro.h>
+
+1654119304 source:f:\uni software\tareas\programacion\contadores\main.cpp
+	<iostream>
+	<allegro.h>
+	<time.h>
+	"Tetris_allegro.h"
+
+1654074115 f:\uni software\tareas\programacion\contadores\tetris_allegro.h
+	<allegro.h>
+
+1599235444 source:f:\uni software\tareas\programacion\contadores\recurso.rc
+
+1654117809 source:f:\uni software\tareas\programacion\contadores\tetris_allegro.cpp
 	"Tetris_allegro.h"
 	<allegro.h>
 

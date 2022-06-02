@@ -50,7 +50,16 @@ class pieza{
 void mostrar_muros(BITMAP * buffer, BITMAP * marco);
 //void mostrar_marco(BITMAP * buffer, BITMAP * marco);
 void mostrar_numero(BITMAP * buffer, BITMAP * img_num, int numero, int xnum, int ynum);
-void mostrar_datos(BITMAP * buffer, BITMAP * img_texto, BITMAP * img_num, int puntos, int nivel);
+void mostrar_datos (BITMAP * buffer, BITMAP * img_texto, BITMAP * img_num, int puntos, int nivel);
+
+void mostrar_dat   (BITMAP * buffer, BITMAP * img_num, int ese, int zeta);
+void mostrar_dat1  (BITMAP * buffer, BITMAP * img_num, int ele, int cuadrado);
+void mostrar_dat2  (BITMAP * buffer, BITMAP * img_num, int palo, int ele2);
+void mostrar_dat3  (BITMAP * buffer, BITMAP * img_num, int te);
+
+
+
+void mostrar_restD(BITMAP * buffer, BITMAP * img_texto, BITMAP * img_num, int lineas, int stats);
 void limpiar_mapa();
 void mostrar_mapa(BITMAP * buffer, BITMAP * img_b);
 void eliminar_fila(int fila);
