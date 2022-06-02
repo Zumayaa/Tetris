@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1654133267 source:f:\uni software\tareas\programacion\final\tetris final\main.cpp
+	<iostream>
+	<allegro.h>
+	<time.h>
+	"Tetris_allegro.h"
+	<ios>
+	<istream>
+	<limits>
+
+1654131351 f:\uni software\tareas\programacion\final\tetris final\tetris_allegro.h
+	<allegro.h>
+
+1654131276 source:f:\uni software\tareas\programacion\final\tetris final\tetris_allegro.cpp
+	"Tetris_allegro.h"
+	<allegro.h>
+
+1654131425 source:f:\uni software\tareas\programacion\final\tetris final\recurso.rc
+

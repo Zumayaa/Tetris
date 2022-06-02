@@ -272,4 +272,3 @@ void portada(BITMAP * p){
    }
  clear_to_color(screen, 0x000000);
 }
-

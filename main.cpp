@@ -2,6 +2,12 @@
 #include <allegro.h>
 #include <time.h>
 #include "Tetris_allegro.h"
+#include <ios>      // Required for streamsize
+#include <istream>
+#include <limits>   // Required for numeric_limits
+
+
+
 
 using namespace std;
 
@@ -167,7 +173,7 @@ int main(){
                         nivel++;
                         val=val-0.7;
 
-                   if (nivel >= 10){
+                   if (nivel >= 6){
                         play_midi(velocidad_alta, 1);
                         }
 
@@ -261,3 +267,4 @@ int main(){
     return 0;
 }
 END_OF_MAIN();
+
