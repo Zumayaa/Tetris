@@ -112,18 +112,11 @@ bool pieza::fila_llena(int fila){
 }
 
 void mostrar_muros(BITMAP * buffer, BITMAP * marco){
-//    blit(muroV, buffer, 0, 0, 0, 0, 25, 500);
- //   blit(muroH, buffer, 0, 0, 0, 500, 300, 25);
-  //  blit(muroV, buffer, 0, 0, 275, 0, 25, 500);
      blit(marco, buffer, 0, 0, 0, 0, 850, 900);
 
 
 }
-/*
-void mostrar_marco(BITMAP * buffer, BITMAP * marco){
-   blit(marco, buffer, 0, 0, 0, 0, 850, 900);
-}
-*/
+
 void limpiar_mapa(){
     for(int i=0; i<21; i++){
         for(int j=0; j<12; j++){
